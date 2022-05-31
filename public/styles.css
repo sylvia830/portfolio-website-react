@@ -1,0 +1,120 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+  }
+  html {
+	font-family: "Montserrat", sans-serif;
+  }
+  body {
+	background: #eee;
+	padding: 0 16px;
+  }
+
+.navbar {
+	background-color: #f5ba13;
+	margin: auto -20px;
+	padding: 10px 60px;
+	display:flex;
+	align-items: center;
+	justify-content: space-between;
+	
+}
+
+.logo a{
+	color: #fff;
+	font-size: 35px;
+	font-weight: 600;
+	text-decoration: none;
+	margin-right: 350px;
+}
+
+.menu li{
+	list-style: none;
+	display:inline-block;
+
+}
+.menu li a{
+	color: #fff;
+	font-size: 18px;
+	font-weight: 500;
+	margin-left: 25px;
+	transition: color 0.3s ease;
+	text-decoration: none;
+}
+
+.menu li a:hover{
+	color:#ADD8E6;
+}
+
+footer {
+	position: fixed;
+	text-align: center;
+	bottom: 0;
+	width: 100%;
+	height: 2.5rem;
+  }
+  
+  footer p {
+	color: #ccc;
+  }
+
+.card {
+	display: grid;
+	grid-template-columns: 240px;
+	grid-template-rows: 100px 260px 25px;
+	grid-template-areas: "image" "text" "buttons";
+	margin-top:25px;
+	margin-bottom: 15px;
+	margin-left: 25px;
+
+	border-radius: 18px;
+	background: white;
+	box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+	text-align: center;
+	
+	transition: 0.5s ease;
+	cursor: pointer;
+
+	float: left;
+}
+
+.card-title{
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.card-description{
+	margin-top: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	color: grey;
+	font-size:15px;
+	font-weight: 300;
+	text-align: left;
+}
+
+.card-btn{
+	grid-area: buttons;
+	margin-top: -17px;
+}
+
+.card-button{
+	display: inline-block;
+	background: #f5ba13;
+	color:#fff;
+	font-size: 15px;
+	padding: 5px 5px;
+	border-radius: 6px;
+	border:2px solid #f5ba13;
+	transition: all 0.3s ease;
+}
+
+.card-button:hover{
+	color: #f5ba13;
+	background: none;
+}
+
+.card-img{
+	background-size:cover;
+	border-radius: 18px;
+}
