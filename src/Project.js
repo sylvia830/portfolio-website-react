@@ -1,8 +1,25 @@
-import React from 'react';
+import React, {useState} from 'react';
+import cards from "./cards";
 
-function Project(props) {
+function Project() {
+  const [noOfCard, setNoOfCard] = useState(4);
+  const [isEverything, setText] = useState(false);
+  const loadCards = () =>{
+	  if (noOfCard===4 && noOfCard!==cards.length){
+		  setNoOfCard(noOfCard + noOfCard);
+		  setText(true);
+	  }else if (noOfCard===cards.length){
+		  const num = noOfCard - 4; 
+		  setNoOfCard(noOfCard-num);
+		  setText(false);
+	  }
+  }
+  const slice = cards.slice(0, noOfCard);
   return (
-    <div className='card'>
+	<section className='project'>
+	
+	{slice.map((props) => {
+		return (<div className='card'>
 		<div className='card-body'>
 			<img className='card-img' height='150px' width='240px'
 			src={props.image} alt ='img'/>
@@ -11,9 +28,19 @@ function Project(props) {
 		</div>
 		<a className='card-btn' href={props.link} target="_blank" rel="noreferrer">
 		<button className='card-button'>View Project</button>
-        </a>
-		
+        </a>	
+	</div>);
+	})}
+
+	<div className='btn-load'>
+	<button 
+	className='card-btn-centre'
+	onClick={()=>loadCards()}
+	>{isEverything? "See Less": "See More"}</button>
 	</div>
+	
+	</section>
+	
   );
 }
 

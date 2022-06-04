@@ -9,6 +9,7 @@
   body {
 	background: #eee;
 	padding: 0 16px;
+	margin-bottom: 60px;
   }
 
 .navbar {
@@ -52,12 +53,14 @@ footer {
 	text-align: center;
 	bottom: 0;
 	width: 100%;
-	height: 2.5rem;
+	height: 3rem;
   }
   
   footer p {
 	color: #ccc;
+	
   }
+
 
 .card {
 	display: grid;
@@ -65,8 +68,9 @@ footer {
 	grid-template-rows: 100px 260px 25px;
 	grid-template-areas: "image" "text" "buttons";
 	margin-top:25px;
-	margin-bottom: 15px;
-	margin-left: 25px;
+	margin-bottom: 20px;
+	margin-left: 70px;
+	margin-right:25px;
 
 	border-radius: 18px;
 	background: white;
@@ -104,8 +108,8 @@ footer {
 
 .card-button{
 	display: inline-block;
-	background: #f5ba13;
-	color:#fff;
+	background: #fff;
+	color:#f5ba13;
 	font-size: 15px;
 	padding: 5px 5px;
 	border-radius: 6px;
@@ -114,6 +118,27 @@ footer {
 }
 
 .card-button:hover{
+	color: #fff;
+	background: #f5ba13;
+}
+
+.btn-load{
+	text-align: center;
+}
+
+
+.card-btn-centre{
+	display: inline-block;
+	position:sticky;
+	background: #f5ba13;
+	color:#fff;
+	font-size: 15px;
+	padding: 5px 5px;
+	border:2px solid #f5ba13;
+	transition: all 0.3s ease;
+}
+
+.card-btn-centre:hover{
 	color: #f5ba13;
 	background: none;
 }
